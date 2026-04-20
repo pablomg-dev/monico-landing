@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MONICO | Inteligencia Artificial Estratégica</title>
-    <meta name="description" content="MONICO es una boutique de consultoría de IA estratégica que fusiona ingeniería, estrategia digital y LegalTech.">
+    <meta name="description" content="MONICO es un estudio de consultoría de IA estratégica que fusiona ingeniería, estrategia digital y LegalTech.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,11 @@
 
         .nav-links a:hover {
             color: var(--text-main);
+        }
+
+        .nav-links a.active {
+            color: var(--text-main);
+            font-weight: 700;
         }
 
         .btn-cta {
@@ -275,6 +280,107 @@
             height: 150%;
             border: 1px solid rgba(255,255,255,0.05);
             transform: rotate(45deg);
+        }
+
+        /* Equipo */
+        #equipo {
+            background: #0a0a0a;
+            padding: 8rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .team-member {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 112, 243, 0.1);
+        }
+
+        .member-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border: 3px solid var(--surface);
+            box-shadow: 0 0 20px rgba(0, 112, 243, 0.2);
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-photo {
+            transform: scale(1.05);
+            border-color: var(--primary);
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            min-height: 3.6rem; /* Ensures alignment for 2-line names */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-role {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            min-height: 2.5rem; /* Ensures alignment for 2-line roles */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 5px 15px var(--primary-glow);
         }
 
         /* Especialización */
@@ -537,6 +643,7 @@
             
             <div class="nav-links">
                 <a href="#nosotros">Nosotros</a>
+                <a href="#equipo">Equipo</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#por-que-monico">Por qué MONICO</a>
                 <a href="#contacto">Contacto</a>
@@ -566,10 +673,69 @@
     </header>
 
     <main>
+        <section id="equipo">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Líderes de la Transformación</h2>
+                    <p>Un equipo multidisciplinario dedicado a integrar la Inteligencia Artificial con excelencia estratégica y legal.</p>
+                </div>
+
+                <div class="team-grid">
+                    <!-- Rodolfo Monico -->
+                    <div class="team-member reveal" style="transition-delay: 0.1s">
+                        <div class="member-photo">
+                            <img src="rodolfo_monico_portrait_1776707160879.png" alt="Rodolfo Monico">
+                        </div>
+                        <div class="member-info">
+                            <h3>Rodolfo Monico</h3>
+                            <div class="member-role">Managing Partner & AI Strategy</div>
+                            <div class="member-links">
+                                <a href="https://www.linkedin.com/in/ing-rodolfo-oscar-monico-a3830514b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link" aria-label="LinkedIn">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.025-3.041-1.853-3.041-1.855 0-2.139 1.45-2.139 2.944v5.701h-3v-11h2.882v1.502h.04c.401-.758 1.378-1.56 2.839-1.56 3.037 0 3.598 1.998 3.598 4.59v6.468z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Romina Soledad Vargas -->
+                    <div class="team-member reveal" style="transition-delay: 0.2s">
+                        <div class="member-photo">
+                            <img src="romina_vargas_portrait_1776707223103.png" alt="Romina Soledad Vargas">
+                        </div>
+                        <div class="member-info">
+                            <h3>Romina Soledad Vargas</h3>
+                            <div class="member-role">LegalTech & Governance Lead</div>
+                            <div class="member-links">
+                                <a href="https://www.linkedin.com/in/rominasoledadvargas?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link" aria-label="LinkedIn">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.025-3.041-1.853-3.041-1.855 0-2.139 1.45-2.139 2.944v5.701h-3v-11h2.882v1.502h.04c.401-.758 1.378-1.56 2.839-1.56 3.037 0 3.598 1.998 3.598 4.59v6.468z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pablo Gonzalez -->
+                    <div class="team-member reveal" style="transition-delay: 0.3s">
+                        <div class="member-photo">
+                            <img src="pablo_gonzalez_portrait_1776707272345.png" alt="Pablo Gonzalez">
+                        </div>
+                        <div class="member-info">
+                            <h3>Pablo Gonzalez</h3>
+                            <div class="member-role">Technology & Implementation Lead</div>
+                            <div class="member-links">
+                                <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.025-3.041-1.853-3.041-1.855 0-2.139 1.45-2.139 2.944v5.701h-3v-11h2.882v1.502h.04c.401-.758 1.378-1.56 2.839-1.56 3.037 0 3.598 1.998 3.598 4.59v6.468z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="nosotros">
             <div class="container about-grid">
                 <div class="about-content reveal">
-                    <h2>Boutique de Consultoría Multidisciplinaria</h2>
+                    <h2>Estudio de Consultoría Multidisciplinaria</h2>
                     <p>En MONICO fusionamos <strong>Ingeniería de IA, Estrategia Digital y LegalTech</strong> para ofrecer soluciones que no solo innovan, sino que cumplen con los estándares regulatorios más exigentes.</p>
                     <div class="stat-box">
                         <div class="stat-number">60%</div>
